@@ -28,7 +28,7 @@ a{text-decoration:none;color:black;}
     -moz-user-select: none; /* Firefox all */
     -ms-user-select: none; /* IE 10+ */
     -o-user-select: none;
-    user-select: none; 
+    user-select: none;
 }
 /***css reset **/
 body,div,p,span,a,img,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,table,tr,td,form,input,textarea,article,aside,figure,section,meter,progress,time,audio,video,command,datalist,canvas,dialog,embed,footer,figcaption,hgroup,keygen,header,mark,nav,output,source,ruby{padding:0;margin:0}
@@ -586,3 +586,83 @@ h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
 .icon-md-weixin2:before{content:"\e92a"}
 .icon-md-weibo2:before{content:"\e91d"}
 .icon-md-qzone2:before{content:"\e91b"}
+
+.dialog_wrap{ }
+.dialog_wrap .mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: rgba(0,0,0,.5);
+}
+.dialog_wrap .dl_wrap{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -245px;
+    width: 490px;
+    background: #fff;
+    z-index: 100001;
+}
+.dialog_wrap .dl_wrap .title_box{
+    position: relative;
+    padding-left: 15px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #fff;
+    background: #3a5170;
+}
+.dialog_wrap .dl_wrap .title_box .close_btn{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    height: 20px;
+    width: 20px;
+    font-size: 18px;
+    line-height: 1;
+    color: #fff;
+}
+.dialog_wrap .dl_wrap .dl_content{
+    background: #fff;
+    padding: 20px 10px 25px;
+}
+.dialog_wrap .dl_wrap .dl_content .dl_title{
+    font-size: 20px;
+    text-align: center;
+    color: #555;
+}
+.dialog_wrap .dl_wrap .dl_content .txt_intro{
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    color: #555;
+    line-height: 36px;
+}
+.dialog_wrap .dl_wrap .btm_box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #f7f7f7;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+.dialog_wrap .dl_wrap .btm_box a{
+    display: inline-block;
+    margin: 0 5px;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.dialog_wrap .dl_wrap .btm_box a:hover{ opacity: .9;}
+.dialog_wrap .dl_wrap .btm_box .comfirm_btn{
+    background: #51ace3;
+}
+.dialog_wrap .dl_wrap .btm_box .cancel_btn{
+    background: #374e70;
+}
