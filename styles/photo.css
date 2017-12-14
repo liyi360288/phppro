@@ -1,0 +1,340 @@
+body{font-size:100%;}
+header{
+	box-shadow:3px 3px 5px rgba(0,0,0,0.5);
+}
+a{outline:none;}
+
+/*模拟滚动条样式*/
+.scroll-wrap{position:relative;}
+.scroll-cont{min-height:300px;overflow:hidden;}
+.scroll-bar,.scroll-slider{
+	position:absolute;
+	top:0;width:4px;
+}
+.scroll-bar{
+	height:100%;background-color:#eaeaea;
+	z-index:1;right:-6px;opacity:0.5;
+}
+.scroll-cont ul:before{
+	content:"";
+	clear:both;
+}
+.scroll-slider{
+	left:0;cursor:pointer;
+	height:50px;
+	border-radius:2px;
+	background-color:#c36e81;
+}
+.scroll-wrap:hover .scroll-bar{
+	opacity:1;
+}
+/*模拟滚动条样式 end*/
+.settingMenu{
+	color:#aaaaaa;
+	position:fixed;z-index:-1;
+	width:38px;height:99%;padding-top:1%;
+	background-color:#eaeaea;
+	border-right:1px solid #bbb;
+	box-shadow:2px 2px 3px rgba(0,0,0,0.2);
+}
+.settingMenu li{
+	cursor:pointer;
+	display:block;height:42px;
+	margin-top:15px;
+}
+.settingMenu li:hover{color:#333;}
+.settingMenu li.Stand{color:#333;position:relative;cursor:default;}
+.settingMenu li.Stand:after{
+	content:'';
+	position:absolute;top:-4px;right:5px;
+	width:8px;height:8px;border-radius:4px;
+	background-color:#c00;
+}
+
+.settingMenu li.unClick{cursor:url("../images/no_sign.png"), default;}
+.settingMenu li.unClick:hover{color:#aaa;}
+
+
+.settingMenu i{
+	display:block;
+	font-size:16px;
+	margin-bottom:3px;
+}
+.settingBox{
+	height:100%;color:#4c4c4c;
+	position:fixed;z-index:-2;
+	left:-200px;box-shadow:2px 2px 3px rgba(0,0,0,0.1);
+	background-color:#f0f0f0;
+	width:200px;padding:0 13px;
+}
+.settingBox h3{
+	line-height:50px;text-align:center;
+	border-bottom:2px solid #d2d2d2;
+}
+/*.settingOption{
+	max-height:800px;
+	overflow:auto;
+}*/
+.settingBoxBtn{
+	display:block;padding-left:1em;
+	font-size:12px;cursor:pointer;
+	line-height:30px;margin-top:10px;
+	border:1px solid #e4e4e4;border-radius:4px;
+	background-color:white;
+}
+.settingBoxBtn i{
+	position:absolute;
+	border-style:solid;
+	border-color:#ccc transparent;
+	border-width:0 5px 5px;
+	right:1em;top:12px;
+}
+.settingBoxBtn:hover{
+	border-color:#ccc;
+	box-shadow:3px 3px 3px rgba(0,0,0,0.1);
+}
+.settingBoxBtn.Stand{border-color:#bbb;cursor:default;box-shadow:none;}
+.settingBoxBtn:hover i,
+.settingBoxBtn.Stand i{
+	border-color:#666 transparent;
+	border-width:5px 5px 0;
+}
+/*设置公共样式*/
+.settingOption li{
+	font-size:0;margin-bottom:10px;float:left;
+	border:1px solid transparent;cursor:pointer;
+}
+.settingOption li:hover{
+	border-color:#aaa;}
+.settingOption li.Stand{
+	position:relative;border-color:#c00;}
+.settingOption li.Stand:after{
+	position:absolute;
+	background-color:#c00;
+}
+
+/*模板设置*/
+
+.templateSetting{padding-left:6px;}
+.templateSetting li{margin-right:9px;}
+.templateSetting li.Stand:after{
+	content:"";top:-5px;right:-5px;
+	width:10px;height:10px;border-radius:50%;
+}
+
+/*背景设置*/
+.bgSetting li,
+.frameStyle li{
+	/*width:86px;height:58px;*/
+	margin-left:6px;margin-right:5px;
+}
+
+.bgSetting li.Stand:after,
+.frameStyle li.Stand:after,
+.photoSetting li.Stand:after{
+	content:"已选择";text-align:center;
+	color:white;font-size:12px;
+	position:absolute;top:0;right:0;
+	width:50px;height:23px;line-height:22px;border-radius:0 0 0 4px;
+	background-color:#c00;
+}
+.bgSetting li{width:86px;height:58px;overflow:hidden;}
+/*我的图片*/
+.photoSetting li{
+	width:86px;height:86px;line-height:86px;
+	margin-left:6px;margin-right:5px;text-align:center;
+	border-color:#ddd;cursor:url('../images/no_sign.png'),default;opacity:0.5;
+}
+.photoSetting li img{
+	vertical-align:middle;
+	max-width:86px;max-height:86px;
+}
+.photoSetting li:hover{border-color:#ddd;}
+.settingOption.photoSelect li{opacity:1;}
+.settingOption.photoSelect li{cursor:pointer;}
+.settingOption.photoSelect li:hover{border-color:#aaa;}
+
+
+
+/*公共按键*/
+.gnBtn_gray,
+.gnBtn_red,
+.gnBtn_green,
+.gnBtn_red_2{
+	padding:0 12px;text-align:center;
+	display:inline-block;
+	border-width:1px;border-style:solid;
+	border-radius:5px;
+}
+a.gnBtn_gray:hover,
+a.gnBtn_red:hover,
+a.gnBtn_green:hover,
+a.gnBtn_red_2:hover{
+	box-shadow:inset 1px 1px 1px rgba(255,255,255,0.6),1px 1px 3px rgba(0,0,0,0.3);
+}
+.gnBtn_gray{background-color:#ededed;border-color:#b2b2b2;}
+a.gnBtn_gray.unclick{opacity:0.5;box-shadow:none;cursor:default;}
+.gnBtn_red{background-color:#e00;border-color:#c70000;}
+.gnBtn_green{background-color:#8f9e8b;border-color:#707b6b;}
+.gnBtn_red_2{background-color:#db7171;border-color:#aa5958;}
+
+.frameSetting{z-index:1;}
+.frameSetting,
+.template{
+	background-repeat:no-repeat;
+	background-size:100%;}
+.photoEditFrame{
+	background-color:#e1e1e1;
+	height:100%;width:100%;
+	position:fixed;z-index:-3;
+}
+/*图片编辑区域*/
+.photoEditWrap{
+	position:relative;
+	padding:10px;
+	border:1px solid #ced0cf;
+	background:url(../images/photo_theme/editPhotoBg.png);
+}
+/*竖版尺寸*/
+.t210x285 .photoEditWrap{width:705px;}
+.t210x285 .templateFgPage{height:478px;}
+.t210x285 .photoEdit{width:705px;height:478px;}
+/*横版尺寸*/
+.t152x203 .photoEditWrap{width:1120px;}
+.t152x203 .templateFgPage{height:419px;}
+.t152x203 .photoEdit{width:1120px;height:419px;}
+
+.photoEditWrap:after{
+	content:"";
+	position:absolute;left:-4px;top:0;
+	width:4px;height:100%;
+	background:url(../images/photo_theme/editPhotoBg.jpg) no-repeat;
+}
+.templateFgPage{
+	z-index: 2;
+	position:absolute;left:0;top:11px;
+	background:url(../images/photo_theme/pageFgLine.png) repeat-y center center;
+}
+.templatePopBg{
+	left:0;top:0;display:none;
+	background-color:rgba(0,0,0,0.4);
+	z-index:99;
+}
+.photoEdit{
+	background-color:rgba(255,255,255,0.6);
+	border:dashed 1px #824242;
+}
+.photoEditWrap:hover .tphoto{z-index:9;}
+.tphoto:hover{background-color:#bbb;}
+.tphoto:hover img{opacity:0.8;}
+.templatePhoto{
+	top:0;left:0;
+}
+.tphoto{
+	position:absolute;
+	overflow:hidden;text-align: center;
+	background:#cecece url("../images/photo_theme/selectPhotoText.png") no-repeat scroll center center;
+	-webkit-user-select: none; /* Chrome all / Safari all */
+	-moz-user-select: none; /* Firefox all */
+	-ms-user-select: none; /* IE 10+ */
+	-o-user-select: none;
+	user-select: none;
+}
+.ttext.Stand,
+.tphoto.Stand{
+	box-shadow:3px 3px 3px rgba(0,0,0,0.5);
+	z-index:101;
+}
+.ttext.Stand{background-color:white;}
+.ttext p{
+	cursor:text;height:100%;cursor:default;
+	word-wrap: break-word;
+	word-break:break-all;
+	outline:none 0;height:100%;overflow:hidden;}
+
+.photoEditWrap:hover .tphoto.Stand{z-index:101;}
+/*.tphoto img{
+	height:auto;width:100%;
+	vertical-align:middle;
+}*/
+.x_img.s,
+.x_img.m,
+.x_img.l,
+.x_img.xl,
+.x_img.xxl{
+	position:absolute;left:50%;
+	width:2000px;
+	margin-left:-1000px;
+}
+.x_img.s{height:100%;top:0;}
+.x_img.m{height:120%;top:-10%;}
+.x_img.l{height:130%;top:-15%;}
+.x_img.xl{height:160%;top:-30%;}
+/*.x_img.xxl{height:160%;top:-30%;}*/
+.x_img img{height:100%;}
+
+.y_x_img{
+	position:absolute;left:50%;top:0;
+	height:100%;width:2000px;
+	margin-left:-1000px;
+}
+.y_x_img img{height:100%;}
+
+.y_img.s,
+.y_img.m,
+.y_img.l{
+	position:absolute;top:50%;
+	height:2000px;line-height:2000px;
+	margin-top:-1000px;
+}
+.y_img.s{width:100%;left:0;}
+.y_img.m{width:110%;left:-5%;}
+.y_img.l{width:126%;left:-13%;}
+.y_img img{width:100%;vertical-align:middle;}
+
+.z1{z-index:1;}
+.z2{z-index:2;}
+.z10{z-index:10;}
+
+.ttext{
+	cursor:default;position:absolute;
+	z-index:97;}
+.ttext:hover{z-index:101;}
+.ttext:hover .ttext_edit{display:block;}
+.ttext.Stand:hover .ttext_edit{display:none;}
+.ttext_edit{
+	display:none;
+	width:30px;height:30px;line-height:30px;text-align:center;
+	background-color:#d9534f;
+	right:-30px;top:0;cursor:pointer;
+	font-size:16px;
+}
+
+.ttextBtnBox{
+	width:300px;height:32px;padding-top:10px;
+	text-align:center;
+	position:absolute;
+	left:0;left:50%; bottom:-40px;
+	margin-left:-150px;
+}
+.ttextBtnBox span{
+	font-size:14px;color:#333;
+	height:30px;line-height:30px;
+	border:1px solid #aaa;
+	border-radius:4px;margin:0 5px;
+	padding:0 15px 0 10px;display:inline-block;
+	background-color:#ddd;
+}
+.ttextBtnBox .editSureBtn:hover,
+.ttextBtnBox .editCancelBtn:hover{
+	box-shadow:2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.ttextBtnBox .editSureBtn{
+	background-color:#d9534f;color:white;
+	cursor:pointer;
+	border-color:#c63d39;}
+.ttextBtnBox .editCancelBtn{
+	background-color:#428bca;color:white;
+	cursor:pointer;
+	border-color:#2476bc;}

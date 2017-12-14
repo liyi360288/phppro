@@ -1,0 +1,32 @@
+var template_setting = {
+	"template_school":[
+		{
+			"tNum":"12"
+		}
+	],
+	"template_marry":[
+		{
+			"tNum":"13"
+		}
+	],
+	"template_love":[
+		{
+			"tNum":"13"
+		}
+	],
+	"template_offspring":[
+		{
+			"tNum":"13"
+		}
+	],
+	"template_magazine":[
+		{
+			"tNum":"12"
+		}
+	],
+	"template_tour":[
+		{
+			"tNum":"10"
+		}
+	]
+}

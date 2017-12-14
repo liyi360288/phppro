@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/photo.css">
+    <title>相册在线编辑</title>
+</head>
+<body class="t210x285" templateSize="210x285" bgnum="19" templateTheme="template_tour" templateNum="11">
+    <header class="hl50">
+		<div class="pl40 pr40">
+			<a href="index" class="fs22 fb cPink_2">拍完印</a>
+			<div class="fr fs12">
+				<span>您好！漫道娘</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="###">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="###">我的作品</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="###">购物车( <b class="fn cRed">42</b> )</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="###">帮助</a>
+			</div>
+		</div>
+    </header>
+    <script>
+        var _siteurl='/'
+    </script>
+    <div class="unSelectText">
+        <!-- 设置菜单 -->
+	    <ul class="settingMenu tc fs12">
+            <li class="unClick Stand"><i class="icon-layout"></i>模板</li>
+            <li class="unClick"><i class="icon-image"></i>背景</li>
+            <li class="unClick"><i class="icon-checkbox-unchecked"></i>相框</li>
+            <li><i class="icon-photo"></i>照片</li>
+            <li class="unClick"><i class="icon-pen2"></i>文字</li>
+            <!-- <li><i class="icon-star"></i>装饰</li> -->
+        </ul>
+        <!-- 模板选择 -->
+	    <div class="settingBox" style="left:39px">
+            <h3 class="mt15 cd"><i class="icon-layout mr5"></i>模板</h3>
+            <span class="settingBoxBtn pr" name="template_school">校园<i></i></span>
+            <span class="settingBoxBtn pr" name="template_marry">结婚<i></i></span>
+            <span class="settingBoxBtn pr" name="template_love">爱情<i class="pa"></i></span>
+            <span class="settingBoxBtn pr" name="template_offspring">亲子<i class="pa"></i></span>
+            <span class="settingBoxBtn pr" name="template_magazine">杂志<i class="pa"></i></span>
+            <span class="settingBoxBtn pr" name="template_tour">旅行<i class="pa"></i></span>
+            <!-- <ul class="templateSetting settingOption pt10">
+            </ul> -->
+        </div>
+        <!-- 背景选择 -->
+	    <div class="settingBox">
+            <h3 class="mt15 cd"><i class="icon-image mr5"></i>背景</h3>
+            <span class="settingBoxBtn Stand pr">通用背景素材<i class="pa"></i></span>
+            <div class="scroll-wrap mt10">
+                <div class="scroll-cont" name="bgphoto" >
+                    <ul class="bgSetting settingOption">
+                    </ul>
+                    <br class="clear" />
+                </div>
+                <div class="scroll-bar" name="bgphoto" ><span class="scroll-slider" name="bgphoto" ></span></div>
+            </div>	
+        </div>
+        <!-- 相框选择 -->
+	    <div class="settingBox">
+            <h3 class="mt15 cd"><i class="icon-checkbox-unchecked mr5"></i>相框</h3>
+            <div class="settingOption frameStyleList pt10" style="display:block;">
+                <!-- <ul class="frameStyle template_xy_t_01_style">
+                    <li><img src="/images/phot/210x285o_theme/template_school/t_01_s/frame_01.png" alt="frame_01.png"></li>
+                </ul> -->
+            </div>
+        </div>
+        <!-- 照片选择 -->
+	    <div class="settingBox pr">
+            <h3 class="mt15 cd"><i class="icon-photo mr5"></i>我的照片</h3>
+            <div class="scroll-wrap mt10">
+                <div class="scroll-cont photoSetting settingOption" name="myphoto" >
+                    <ul>
+                        <li><img src="./images/photo_theme/photo_m/photo_1.jpg" alt="photo_1.jpg"></li>
+                        <li><img src="./images/photo_theme/photo_m/photo_2.jpg" alt="photo_2.jpg"></li>
+                        <li><img src="./images/photo_theme/photo_m/photo_3.jpg" alt="photo_3.jpg"></li>
+                        <li><img src="./images/photo_theme/photo_m/photo_4.jpg" alt="photo_4.jpg"></li>
+                        <li><img src="./images/photo_theme/photo_m/photo_5.jpg" alt="photo_5.jpg"></li>
+                        <li><img src="./images/photo_theme/photo_m/photo_6.jpg" alt="photo_6.jpg"></li>
+                        <li><img src="./images/photo_theme/photo_m/photo_7.jpg" alt="photo_7.jpg"></li>
+                    </ul>
+                    <br class="clear" />
+                </div>
+                <div class="scroll-bar" name="myphoto" ><span class="scroll-slider" name="myphoto" ></span></div>
+            </div>
+            <!-- 照片提示 -->
+            <div class="tc l30 myPhotoTip">
+                <span onclick="popTip('<p class=tc><b class=cPink_2>请在相册模板对应的图片区域<br />双击选择图片</b></p>',11)" class="fs12 cGray cp">
+                    <i class="icon-tixing mr5"></i>无法选择图片？
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="photoEditFrame">
+        <div class="mauto pl150 ml100 photoEditHover">
+            <div class="gnMenu l30 fs12 cd mt30 tc">
+                <span class="gnBtn_gray mr10 pr fs12">
+                    <i class="icon-stack2"></i>
+                    当前第 <b class="fn photoNowNum">1</b>
+                    / 共 <b class="fn photoTotalNum"></b> 页
+                    &nbsp;总价 ￥<b class="photoTotalPrice pr">59.00</b>
+                </span>
+                <a class="gnBtn_gray mr10 addPhotoBtn" href="javascript:void(0)">+ 加页 / ￥<b class="photoAddPrice">5</b></a>
+				<a class="gnBtn_gray mr10 lessPhotoBtn unclick" href="javascript:void(0)">删除本页</a>
+				<!-- <span class="gnBtn_gray mr10"></span> -->
+				<a class="gnBtn_gray mr10 prevPhotoBtn unclick" href="javascript:void(0)">上一页</a>
+				<a class="gnBtn_gray mr10 nextPhotoBtn" href="javascript:void(0)">下一页</a>
+				<a class="gnBtn_red_2 cWhite w50 mr10 photo_setting_save" href="javascript:void(0)"><i class="icon-inbox fs14 mr5"></i>保存</a>
+				<a class="gnBtn_green cWhite w50 mr10" href="photo_view" target="_blank">预览</a>
+            </div>
+            <div class="photoEditWrap mauto mt30" data-page="0" total-page="4">
+                <div class="templateFgPage w"></div>
+                <div class="photoEdit mauto"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/jquery-1.9.1.min.js"></script>
+    <script src="./scripts/public.js"></script>
+    <script src="./scripts/cxm-kacayin-worksobj.js"></script>
+    <script src="./script/template_setting.json"></script>
+	<script src="./script/template_school.json"></script>
+	<script src="./script/template_marry.json"></script>
+	<script src="./script/template_love.json"></script>
+	<script src="./script/template_offspring.json"></script>
+	<script src="./script/template_magazine.json"></script>
+	<script src="./script/template_tour.json"></script>
+    <script src="./scripts/photo_set.js"></script>
+    <script src="./scripts/photoonline.js"></script>
+</body>
+</html>
