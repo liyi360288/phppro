@@ -11,7 +11,8 @@ table{
     border-spacing: 0;
     box-shadow: 0 3px 0 rgba(12, 12, 12, 0.03);
     max-width: 100%;
-    width: 100%;
+	width: 100%;
+	background-color: #fff;
 }
 
 .normalTable th,
@@ -513,8 +514,8 @@ span.menuBtn.Active:before{content:"-";}
 	margin-right: 30px;
 }
 
-.order_page_style .list .order_num,.order_page_style .list .userid{
-	margin-right: 65px;
+.order_page_style .list .order_num,.order_page_style .list .userid,.order_page_style .list .bad_order_num{
+	margin-right: 50px;
 }
 
 .order_page_style .inner_table{
@@ -565,10 +566,159 @@ span.menuBtn.Active:before{content:"-";}
 	border-radius: 3px;
 	margin-left: 10px;
 }
+.order_detail .back_link_box{
+	background-color: #eeeeee;
+	padding: 7px 10px;
+}
+.order_detail .back_link_box .back_link{
+	display: block;
+	width: 120px;
+	height: 26px;
+	font-size: 12px;
+	color: #fff;
+	line-height: 26px;
+	text-align: center;
+	border-radius: 3px;
+	background-color:#017eb4;
+}
+
+
+.order_detail .abock{
+	position: relative;
+	padding: 35px 9px 0; 
+	background-color: #fff;
+}
+.order_detail .abock .title_box{
+	position: absolute;
+	top: 0;
+	left: 9px;
+	width: 115px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	color: #555;
+	font-size: 16px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #c7181d #dfdfdf #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	z-index: 100;
+}
+
+.order_detail .abock .msg_box{
+	border-top: 2px solid #cfcfcf;
+	padding: 18px 0;
+	
+}
+.order_detail .abock .msg_box .titletxt{
+	color: #6b6b6b;
+	height: 24px;
+	line-height: 24px;
+	padding-left: 15px;
+	border-left: 6px solid #c7181d;
+}
+.order_detail .abock .msg_box .titletxt span{
+	color: #171717;
+}
+.order_detail .abock .msg_box .order_status{
+	margin-left: 45px;
+}
+.order_detail .msg_box .txt1 span{
+	display: inline-block;
+	line-height: 22px;
+	text-align: right;
+	color: #171717;
+}
+.order_detail .msg_box .txt1{
+	color: #6b6b6b;
+	margin-left: 10px;
+}
+.order_detail .msg_box .txt1:last-child{
+	margin-bottom: 30px;
+}
+	
+.abock.od_msgbox .titletxt{
+	margin-bottom: 10px;
+}
+
+.abock.od_msgbox .pdimg{
+	width: 90px;
+	height: 65px;
+	margin-right: 10px;
+}
+.abock.od_msgbox .img_box span{
+	vertical-align: top;
+	font-size: 14px;
+}
+.abock.od_msgbox td{
+	vertical-align: top;
+	text-align: center;
+	padding: 10px 0;
+}
+.abock.od_msgbox td:first-child{
+	text-align: left;
+}
+.abock.od_msgbox td+td,.abock.od_msgbox th+th{
+	border-left: 2px solid #d8d8d8;
+}
+.abock.od_msgbox th{
+	background-color:#e6e6e6;
+	height: 30px;
+}
+.abock.od_msgbox .product_table,.data_box{
+	padding: 0 15px;
+}
+.data_box{
+	padding: 25px 0;
+	border-bottom: 2px solid #cfcfcf;
+}
+
+.data_box .txt1,.data_box .txt2{
+	text-align: right;
+}
+.data_box .txt2{
+	color: #d60002;
+	font-size: 18px;
+	margin-top: 10px;
+}
+.data_box .txt2 span{ 
+	color: #222;
+
+}
+.order_detail .msg_box .data_box .txt1 span{
+	width: 30em;
+	line-height: 35px;
+}
+
+.err_img{
+	width: 48px;
+	height: 45px;
+}
 .order_page_style .inner_table .lh21{
 	line-height: 21px;
 }
-
+.inner_table .num{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #fe0000;
+	border-radius: 100%;
+	color: #fff;
+	line-height: 15px;
+	text-align: center;
+	font-style: normal;
+}
+.applyList .list{
+	padding-left: 10px;
+}
+.applyList .list .txt{
+	margin-right: 18px;
+}
+.applyList .list .txt i{
+	color:#007dfd;
+	font-style: normal;
+}
 .textUnSelect{
 	padding-bottom: 90px;
 }

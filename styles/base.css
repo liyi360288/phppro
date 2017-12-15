@@ -659,6 +659,39 @@ h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
     border-radius: 3px;
     font-size: 14px;
 }
+.dialog_wrap .dl_wrap .express{
+    margin-bottom: 15px;
+}
+.dialog_wrap .dl_wrap .select{
+    width: 160px;
+    height: 22px;
+}
+.dialog_wrap .dl_wrap .text{
+    width: 264px;
+    height: 60px;
+    vertical-align: top;
+    resize: none;
+    padding: 6px 8px;
+}
+.dialog_wrap .dl_wrap .answer{
+    margin-left: 48px;
+}
+.dialog_wrap .dl_wrap .choose_commodity{
+    margin: 15px 0;
+}
+.dialog_wrap .dl_wrap .choose_commodity select{
+    width: 250px;
+    height: 32px;
+    background-color: #fff;
+}
+.dialog_wrap .dl_wrap .reply_num input{
+    width: 72px;
+    height: 30px;
+    padding-left: 6px;
+    border-radius: 3px;
+    border: 1px solid #8e8e8e;
+}
+
 .dialog_wrap .dl_wrap .btm_box a:hover{ opacity: .9;}
 .dialog_wrap .dl_wrap .btm_box .comfirm_btn{
     background: #51ace3;
