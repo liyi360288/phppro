@@ -8,6 +8,10 @@
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 }
+.table thead th{
+    font-weight: normal;
+    font-size: 14px;
+}
 .table thead th, .table td{
     white-space: nowrap;
 }

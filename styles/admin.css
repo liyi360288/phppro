@@ -431,7 +431,7 @@ span.menuBtn.Active:before{content:"-";}
 	padding: 4px 5px;
 }
 .tool_box .search_box,.date_input {
-	width: 160px;
+	width: 153px;
 	height: 30px;
 	border: 1px solid #dcdcdc;
 	border-radius: 3px;
