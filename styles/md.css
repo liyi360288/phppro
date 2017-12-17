@@ -21,21 +21,23 @@
 .menu .menuHead h1{display:none;}
 .menu .menutoggle{left:0;}
 .menu dl{padding:5px;}
-.menu .menuBtn:before{content:"";}
+.menu .menuBtn:before{ display: none; content:"";}
 .menu .menuBtn span{display:none;}
 .menu dd{position:relative;}
-.menu .sMenu{position:absolute;left:0;width:180px;border-radius:0 0 3px;}
+.menu .sMenu{ display: none !important; position:absolute;left:0;width:180px;border-radius:0 0 3px;}
 .menu dd i{margin-right:0;font-size:14px;}
 
 .menu .sMenu{background-color:#1d2939;}
 .menu .sMenu a{padding-left:55px;}
 .menu .sMenu a:before{left:45px;}
 .menu dd:hover{width:180px;box-shadow:2px 0px 3px rgba(0,0,0,0.2);}
+.menu dd:hover .sMenu{ display: block !important;}
 .menu dd:hover .menuBtn{background-color:white;color:#1d2939;border-radius:3px 3px 0;}
 .menu dd:hover .menuBtn.Stand{background-color:#1caf9a;color:white;}
 .menu dd:hover .menuBtn span{
 	display:inline-block;margin-left:18px;
 }
 .menu dd:hover .sMenu{display:block;}
+span.menuBtn.Active:before{content:"+";}
 .contentFrame{ margin-left: 50px !important;}
 }
