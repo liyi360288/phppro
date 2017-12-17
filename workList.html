@@ -34,9 +34,12 @@
 				</ul>
 			</dd>
             <dd>
-				<span class="menuBtn Stand Active"><i class="icon-paperplane"></i><span>作品管理</span></span>
+				<span class="menuBtn Stand Active"><i class="icon-profile"></i><span>订单管理</span></span>
 				<ul class="sMenu mb10">
-					<li><a href="user_list" class="Stand">作品列表</a></li>
+					<li><a href="orderList.html" class="Stand">订单列表</a></li>
+					<li><a href="cgodlist.html">换货订单列表</a></li>
+					<li><a href="rmlist.html">售后申请列表</a></li>
+					<li><a href="shlist.html">待处理售后申请</a></li>
 				</ul>
             </dd>
             <dd>
@@ -74,86 +77,6 @@
 		<span>漫道娘</span>
 		<a href="###">注销<i class="icon-exit ml5"></i></a>
     </header>
-    <script type="text/javascript">
-		// 缩小菜单
-		var $menu = $('.menu'),
-			isMax = true;
-		$('.menutoggle').click(function(){
-			var $contentFrame = $('.contentFrame');
-			if(!$menu.hasClass('mMini')){
-				$menu.addClass('mMini');
-				$contentFrame.css('margin-left','50px');
-				$('.sMenu').attr('style','');
-				isMax = false;
-			}else{
-				$menu.removeClass('mMini');
-				$contentFrame.css('margin-left','210px');
-				isMax = true;
-			}
-		});
-		// 正常菜单点击
-		$('.menuBtn').click(function(){
-			if(isMax){
-				var $this = $(this),
-					thisParents = $this.parents('dl'),
-					thisUl = $(this).next('ul'),
-					thisLi = thisUl.children('li'),
-					liLen = thisLi.length;
-				if(!$this.hasClass('Active')){
-					var i = thisParents.find('.Active').parent('dd').index();
-					thisParents.find('.Active').parent('dd').children('.menuBtn').removeClass('Active').next('ul').animate({'height':0},200,function(){
-						$(this).hide();
-					});
-					$this.addClass('Active');
-					thisUl.show().animate({'height':liLen*35},200);
-				}else{
-					$this.removeClass('Active');
-					thisUl.animate({'height':0},200,function(){
-						$(this).hide();
-					});
-				}
-			}
-		});
-		var $menu_dd = $menu.children('dl').find('dd'),
-			pagename = $('body').attr('pagename'),
-			subpagenum = $('body').attr('subpagenum');
-		switch(pagename){
-			case 'index':
-				menuBtnStand(0);
-				break;
-			case 'settings':
-				menuBtnStand(1);
-				break;
-			case 'product':
-				menuBtnStand(2);
-                break;
-            case 'works':
-				menuBtnStand(3);
-				break;
-			case 'user':
-				menuBtnStand(4);
-                break;
-            case 'order':
-				menuBtnStand(5);
-				break;
-			case 'message':
-				menuBtnStand(6);
-				break;
-		}
-
-		function menuBtnStand(index){
-			var obj = $menu_dd.eq(index),
-				obj_ul = obj.find('ul'),
-				obj_li = obj.find('li');
-				menu_dd_len = obj_li.length;
-			obj.find('.menuBtn').addClass('Stand Active');
-			obj_ul.show().css('height',menu_dd_len*35);
-			obj_li.eq(subpagenum).children('a').addClass('Stand');
-
-		}
-
-
-    </script>
     <div class="contentFrame">
 		<!-- 当前导航 -->
 		<nav>
@@ -194,7 +117,7 @@
                         <td>销售中</td>
                         <td>60.23</td>
                         <td>永久储存</td>
-						<td><a href="./index.html" class="cBlue_2">查看</a><span class="ml15 mr15 c999">|</span><a href="###" class="cBlue_2">删除</a></td>
+						<td><a href="./editphoto.html" class="cBlue_2">查看</a><span class="ml15 mr15 c999">|</span><a href="###" class="cBlue_2">删除</a></td>
                     </tr>
                     <tr>
                         <td>888</td>
@@ -204,7 +127,7 @@
                         <td>已下架</td>
                         <td>60.23</td>
                         <td>缓存</td>
-						<td><a href="./index.html" class="cBlue_2">查看</a><span class="ml15 mr15 c999">|</span><a href="###" class="cBlue_2">删除</a></td>
+						<td><a href="./editphoto.html" class="cBlue_2">查看</a><span class="ml15 mr15 c999">|</span><a href="###" class="cBlue_2">删除</a></td>
                     </tr>
                     <tr>
                         <td>888</td>
@@ -214,11 +137,12 @@
                         <td>销售中</td>
                         <td>60.23</td>
                         <td>永久储存</td>
-						<td><a href="./index.html" class="cBlue_2">查看</a><span class="ml15 mr15 c999">|</span><a href="###" class="cBlue_2">删除</a></td>
+						<td><a href="./editphoto.html" class="cBlue_2">查看</a><span class="ml15 mr15 c999">|</span><a href="###" class="cBlue_2">删除</a></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
+	<script src="./scripts/menu.js"></script>
 </body>
 </html>

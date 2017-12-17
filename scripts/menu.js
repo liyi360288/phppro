@@ -77,3 +77,9 @@ function menuBtnStand(index){
 }
 
 
+// 弹窗
+$('.js_close_btn').bind('click', function() {
+    $(this).parents('.dialog_wrap').hide();
+})
+
+
