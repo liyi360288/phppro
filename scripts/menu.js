@@ -72,7 +72,7 @@ function menuBtnStand(index){
         menu_dd_len = obj_li.length;
     obj.find('.menuBtn').addClass('Stand Active');
     obj_ul.show().css('height',menu_dd_len*35);
-    obj_li.eq(subpagenum).children('a').addClass('Stand');
+    // obj_li.eq(subpagenum).children('a').addClass('Stand');
 
 }
 
