@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="./styles/base.css">
-    <link rel="stylesheet" href="./styles/md.css">
-    <link rel="stylesheet" href="./styles/admin.css">
+	<link rel="stylesheet" href="./styles/admin.css">
+	<link rel="stylesheet" href="./styles/md.css">
     <title>作品列表</title>
     <script src="./scripts/jquery-1.9.1.min.js"></script>
 </head>
@@ -37,7 +37,7 @@
             <dd>
 				<span class="menuBtn"><i class="icon-paperplane"></i><span>作品管理</span></span>
 				<ul class="sMenu mb10">
-					<li><a href="user_list" class="Stand">作品列表</a></li>
+					<li><a href="worklist.html" class="Stand">作品列表</a></li>
 				</ul>
             </dd>
             <dd>
@@ -416,7 +416,7 @@
     <div class="dialog_wrap" style="display:none">
         <div class="mask"></div>
         <div class="dl_wrap">
-            <div class="title_box"><a href="javascript:;" class="close_btn icon-close"></a>提示</div>
+            <div class="title_box"><a href="javascript:;" class="close_btn icon-close js_close_btn"></a>提示</div>
             <div class="dl_content">
                 <p class="dl_title">确定不通过该条售后申请记录？</p>
                 <p class="txt_intro">一旦确认不通过，该售后申请将返回“未审核”售后申请列表重新由运营人员审核！</p>
@@ -433,7 +433,7 @@
         <div class="mask"></div>
         <div class="dl_wrap">
             <div class="title_box">
-				<a href="javascript:;" class="close_btn icon-close"></a>
+				<a href="javascript:;" class="close_btn icon-close js_close_btn"></a>
 				发货
 			</div>
             <div class="dl_content">
@@ -469,7 +469,7 @@
         <div class="mask"></div>
         <div class="dl_wrap">
             <div class="title_box">
-				<a href="javascript:;" class="close_btn icon-close"></a>
+				<a href="javascript:;" class="close_btn icon-close js_close_btn"></a>
 				审核不通过售后申请
 			</div>
             <div class="dl_content">
@@ -492,7 +492,7 @@
         <div class="mask"></div>
         <div class="dl_wrap">
             <div class="title_box">
-				<a href="javascript:;" class="close_btn icon-close"></a>
+				<a href="javascript:;" class="close_btn icon-close js_close_btn"></a>
 				审核通过售后申请
 			</div>
             <div class="dl_content">
@@ -530,10 +530,10 @@
     </div>
 	<!-- 弹窗4 END-->
 	<!-- 弹窗5-->
-    <div class="dialog_wrap" style="display:none">
+    <div class="dialog_wrap">
         <div class="mask"></div>
         <div class="dl_wrap">
-            <div class="title_box"><a href="javascript:;" class="close_btn icon-close"></a>提示</div>
+            <div class="title_box"><a href="javascript:;" class="close_btn icon-close js_close_btn"></a>提示</div>
             <div class="dl_content">
                 <p class="dl_title">确定通过该条售后申请记录？</p>
                 <p class="txt_intro">一旦通过将在“换货订单列表”中生成新订单，且无法撤销！</p>
@@ -545,7 +545,7 @@
         </div>
     </div>
 	<!-- 弹窗5 END-->
-	<script src="menu.js"></script>
+	<script src="./scripts/menu.js"></script>
 
 </body>
 </html>
